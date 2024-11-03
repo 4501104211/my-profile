@@ -105,7 +105,7 @@ html {
 
 /* Gradient text */
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/50;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/50 font-light tracking-tight;
 }
 
 /* Hover card effect */
@@ -115,21 +115,21 @@ html {
 
 /* Section titles */
 .section-title {
-  @apply flex items-center gap-3 mb-6;
+  @apply flex items-center gap-2 mb-4;
 }
 
 .section-title-dot {
-  @apply w-5 h-5 rounded-full bg-primary/20 relative;
+  @apply w-3 h-3 rounded-full bg-primary/20 relative;
 }
 
 .section-title-dot::after {
   content: '';
-  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-primary;
+  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-primary;
 }
 
 .section-title-text {
-  @apply text-lg font-semibold tracking-wide;
-  color: var(--foreground);
+  @apply text-xs font-medium tracking-widest uppercase;
+  color: var(--gray-400);
 }
 
 /* Tech stack and work cards */
@@ -159,4 +159,16 @@ html {
 
 .tech-icon-text:hover {
   opacity: 1;
+}
+
+/* Card title styles */
+.card-title {
+  @apply text-sm font-medium tracking-wide;
+  color: var(--foreground);
+}
+
+/* Body text styles */
+.body-text {
+  @apply text-sm leading-relaxed;
+  color: var(--gray-400);
 }

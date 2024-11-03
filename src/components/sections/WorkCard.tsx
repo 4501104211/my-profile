@@ -9,6 +9,7 @@ interface WorkCardProps {
 }
 
 export default function WorkCard({ title, description, image, link }: WorkCardProps) {
+  console.log(description);
   return (
     <Link 
       href={link}

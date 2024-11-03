@@ -17,10 +17,13 @@ interface FooterLink {
   href: string;
   label: string;
 }
+const rootUrl = typeof window !== 'undefined'
+? window.location.origin
+: `https://${process.env.VERCEL_URL || 'localhost:3000'}`;
 
 const NAV_LINKS: NavLink[] = [
-  { href: '/work', label: 'Work', isNew: true },
-  { href: '/blog', label: 'Blog' },
+  { href: '/blog', label: 'Blog', isNew: true },
+  { href: `${rootUrl}/resume`, label: 'Resume', isNew: true },
   { href: '/templates', label: 'Templates', isNew: true },
 ];
 
